@@ -1,0 +1,149 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      color: black;
+      padding: 1px 15px;
+      position: relative;
+      border: 1px solid #33333340;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu a {
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .menu {
+      display: flex;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 53px;
+        right: 0;
+        background: white;
+        width: 300px;
+        padding: 10px;
+        border: 1px solid #33333340;
+        z-index: 1000;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .menu a {
+        margin: 10px 0;
+      }
+    }
+
+   .container {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        justify-content: center;
+        font-size: 1rem;
+        list-style: none;
+        gap: 30px; 
+        padding: 5px;
+    }
+p {
+        animation-name: bubbly;
+        animation-duration: calc(var(--i) * 1s);
+        animation-fill-mode:forwards;
+        animation-timing-function:ease-in-out
+    }
+@keyframes bubbly {
+  0% {
+    opacity: 0;
+  
+    transform: scale(0);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+  
+    transform: scale(1);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+#container {
+  color:#999;
+  text-transform: uppercase;
+  font-size:24px;
+  font-weight:bold;
+}
+
+#flip {
+  height:40px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom: 45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+p {
+  width:100%;
+  font-size:14px;
+  color:#999;
+}
